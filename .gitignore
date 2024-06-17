@@ -13,4 +13,4 @@
 .nfs*
 
 # Ignore specific directory
-India_Pincodes/  # Ignore the India_Pincodes directory and its contents
+India_Pincodes/  
