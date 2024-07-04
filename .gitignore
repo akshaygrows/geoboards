@@ -13,4 +13,6 @@
 .nfs*
 
 # Ignore specific directory
-India_Pincodes/  
+India_Pincodes/
+
+requirements.txt
