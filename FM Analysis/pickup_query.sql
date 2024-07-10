@@ -8,7 +8,7 @@ with ops_main as (
     where 1=1
     and pickup_vehicle is not null
     and shipping_partner = 'Hyperlocal'
-    and date_trunc('day', pickuptime) = date_trunc('day', now() + interval'5.5 hours' - interval '2 day')
+    and date_trunc('day', pickuptime) >= date_trunc('day', now() + interval'5.5 hours' - interval'3 days')
     and op_owner not in ('GS', '81')
     and user_name not in ('Purplle', 'Lenskart')
 )
