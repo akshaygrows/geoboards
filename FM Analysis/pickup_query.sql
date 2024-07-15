@@ -23,7 +23,7 @@ shipment_order_details as (
 ,
 base as (
     select
-        concat(s.user_id, '-', s.warehouse_id, '-', o.warehouse_city) as key1
+        concat(s.user_id, '-', s.warehouse_id, '-', o.warehouse_city) as key
     ,   s.warehouse_id
     ,   o.pickup_vehicle
     ,   o.pickuptime
