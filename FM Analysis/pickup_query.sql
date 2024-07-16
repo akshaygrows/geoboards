@@ -3,12 +3,13 @@ with ops_main as (
         awb
     ,   warehouse_city
     ,   pickuptime
+    ,   created_date
     ,   pickup_vehicle
     from public.ops_main
     where 1=1
     and pickup_vehicle is not null
     and shipping_partner = 'Hyperlocal'
-    and date_trunc('day', pickuptime) >= date_trunc('day', now() + interval'5.5 hours' - interval'3 days')
+    and pickuptime >= (now() + interval '5.5 hours' - interval '48 hours')
     and op_owner not in ('GS', '81')
     and user_name not in ('Purplle', 'Lenskart')
 )
@@ -27,6 +28,7 @@ base as (
     ,   s.warehouse_id
     ,   o.pickup_vehicle
     ,   o.pickuptime
+    ,   o.created_date
     ,   o.awb
     from ops_main o
     left join shipment_order_details s on o.awb = s.awb
