@@ -15,3 +15,9 @@ from (
     from excel.pickup_cutoff_time
 ) as a
 where pickup_cutoff is not null
+and key is not null
+and warehouse_id is not null
+and warehouse_name is not null
+and user_name is not null
+and user_id is not null
+and warehouse_city is not null
