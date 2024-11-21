@@ -205,4 +205,5 @@ def update_graph(city_slctd, hub_slctd, pincode_slctd):
 
 # Run the app
 if __name__ == '__main__':
-    app.run_server(debug=True, port=8052)
+    app.run_server(host='0.0.0.0', port=8050)
+
