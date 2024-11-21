@@ -148,7 +148,7 @@ def update_graph(city_slctd, hub_slctd, pincode_slctd):
     
     output_container_city = f"Results are shown for the Shipping City: {city_slctd}"
     output_container_last_mile_hub = f"Results are shown for Hub: {hub_slctd}"
-    output_container_shipping_pincode = f"Results are shown for Hub: {pincode_slctd}"
+    output_container_shipping_pincode = f"Results are shown for Pincode: {pincode_slctd}"
     
     # Filter the dataframe based on selected city and hub
     dff = df[df["shipping_city"] == city_slctd]
@@ -206,4 +206,3 @@ def update_graph(city_slctd, hub_slctd, pincode_slctd):
 # Run the app
 if __name__ == '__main__':
     app.run_server(host='0.0.0.0', port=8050)
-
